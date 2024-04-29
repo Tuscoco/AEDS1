@@ -7,17 +7,17 @@ int main()
 
     scanf("%d",&T);
 
-    if(T<2){
-        printf("N[%d] = %d\n",i,1);
+    if(T==1){
+        printf("N[%d] = %d\n",0,0);
         return 0;
-    }else{
+    }
+
     for( ;i<1000;i++){
         for( ;num<T;num++){
             N[i] = num;
             printf("N[%d] = %d\n",i,N[i]);
         }
         num = 0;
-    }
     }
 
     return 0;
