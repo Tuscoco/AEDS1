@@ -17,7 +17,7 @@ int main()
     for( ;i<=T;i++){
         FIB[i] = n1+n2;
         n1 = n2;
-        n2 += n1;
+        n2 = FIB[i];
     }
 
     printf("Fib[%d] = %d",T,FIB[T]);
