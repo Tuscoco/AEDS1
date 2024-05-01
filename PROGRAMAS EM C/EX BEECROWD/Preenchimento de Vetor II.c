@@ -13,11 +13,14 @@ int main()
     }
 
     for( ;i<1000;i++){
-        for( ;num<T;num++){
-            N[i] = num;
-            printf("N[%d] = %d\n",i,N[i]);
+
+        if(num == T){
+            num = 0;
         }
-        num = 0;
+
+        N[i] = num;
+        printf("N[%d] = %d\n",i,N[i]);
+        num++;
     }
 
     return 0;
