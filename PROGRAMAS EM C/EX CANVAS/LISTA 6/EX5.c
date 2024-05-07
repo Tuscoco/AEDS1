@@ -46,6 +46,7 @@ int somas(int **matriz,int a){
         }
         return soma;
     }
+    return 0;
 }
 
 
@@ -60,9 +61,11 @@ void preencher_Matriz(int a){
         }
     }
 
-    resultado=somas(m[5][5],a);
+    resultado=somas((int**)m,a);
 
     printf("%d\n",resultado);
+
+    return;
 }
 
 
