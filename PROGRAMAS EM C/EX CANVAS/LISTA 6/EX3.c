@@ -1,8 +1,13 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void intercalar(int *v1,int *v2){
-    int i=0,j=0,z=0;
-    int vetor3[10];
+    int i=0,j=0;
+    int *vetor3 = (int*) malloc(10 * sizeof(int));
+
+    for(i=0;i<10;i++){
+        vetor3[i] = 0;
+    }
 
     for(j=0,i=0;j<10;j+=2,i++){
         vetor3[j] = v2[i]; 
@@ -15,6 +20,8 @@ void intercalar(int *v1,int *v2){
     for(i=0;i<10;i++){
         printf("Vetor3[%d] = %d\n",i,vetor3[i]);
     }
+
+    free(vetor3);
 }
 
 void preencher_Vetores(){
@@ -32,7 +39,7 @@ void preencher_Vetores(){
         scanf("%d",&vetor2[i]);
     }
 
-    intercalar(*vetor1,*vetor2);
+    intercalar(vetor1,vetor2);
 }
 
 int main(){
@@ -40,5 +47,3 @@ int main(){
 
     return 0;
 }
-
-///////////////////////////////////////////////////////////////////zsenul7iyucui
