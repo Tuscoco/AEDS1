@@ -20,14 +20,27 @@ void vogaisConsoantes(const char *frase){
     printf("Consoantes:%d\n",consoantes);
 }
 
-int main()
+int main(int n_args,char**args)
 {
-    char texto[100];
+    char f[1000] = "";
 
-    printf("Informe uma palavra:\n");
-    scanf("%[^\n]s\n", texto);
+    if(n_args > 1){
+        int i=1;
 
-    vogaisConsoantes(texto);
+        printf("Argumentos:\n");
+        printf("\targs[0]:%s\n", args[0]);
+
+        for(i=1;i<n_args;i++){
+            printf("\targs[%d]:%s\n",i,args[i]);
+            strcat(f,args[i]);
+            strcat(f," ");
+        }
+    }else{
+        printf("Digite uma frase:\n");
+        scanf("%[^\n]s\n",f);
+    }
+
+    vogaisConsoantes(f);
 
     return 0;
 }
