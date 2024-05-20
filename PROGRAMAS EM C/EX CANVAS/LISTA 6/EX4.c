@@ -31,6 +31,8 @@ int main()
         }
     }
 
+    system("cls");
+
     printf("Maior temperatura: %.2lf\n",tempmenor);
     printf("Menor temperatura: %.2lf\n",tempmaior);
     printf("Temperatura media: %.2lf\n",media);
