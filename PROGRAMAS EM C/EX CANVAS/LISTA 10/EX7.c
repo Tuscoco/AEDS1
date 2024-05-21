@@ -11,7 +11,7 @@ int main()
     printf("Informe a quantidade de letras:\n");
     scanf("%d",&n);
 
-    char *letras = (char*) malloc(n * sizeof(char));
+    char letras = (char *) malloc(n * sizeof(char));
 
     for(i=0;i<n;i++)
     {
