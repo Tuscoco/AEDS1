@@ -4,12 +4,12 @@
 int main()
 {
     char *texto = (char*) malloc(40 * sizeof(char));
-    FILE *arq = fopen("exercicio2.txt","w");
+    FILE *arq = fopen("..\\arquivos\\exercicio2.txt","w");
 
     printf("Digite uma frase:\n");
     scanf("%[^\n]", texto);
 
-    fprintf(arq,texto);
+    fprintf(arq,"%s",texto);
 
     fclose(arq);
     free(texto);

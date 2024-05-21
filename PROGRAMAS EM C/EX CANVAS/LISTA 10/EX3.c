@@ -5,7 +5,7 @@
 int main()
 {
     int cont=0;
-    FILE *arq = fopen("exercicio2.txt","r");
+    FILE *arq = fopen("..\\arquivos\\exercicio2.txt","r");
 
     while(!feof(arq))
     {
