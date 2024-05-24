@@ -5,7 +5,7 @@
 int main()
 {
     int i=0,n;
-    double resultado=0;
+    double resultado=0.0;
 
     printf("Informe o numero de vezes que sera repetido:\n");
     scanf("%d",&n);
@@ -14,8 +14,6 @@ int main()
     {
         resultado += pow(2,(-i));
     }
-
-    system("cls");
 
     printf("Resultado: %.2lf\n",resultado);
 
