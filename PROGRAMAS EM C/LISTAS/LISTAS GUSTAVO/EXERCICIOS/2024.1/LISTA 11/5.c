@@ -5,9 +5,34 @@
 int **alocar(int linhas, int colunas)
 {
     int **m = (int**) calloc(linhas,sizeof(int*));
-    for(int i=0;i<colunas;i++)
+    int i;
+
+    if(m == NULL)
+    {
+        fprintf(stderr,"Erro ao alocar memoria!!!");
+        return NULL;
+    }
+
+    for(i=0;i<linhas;i++)
     {
         m[i] = (int*) calloc(colunas,sizeof(int));
+
+        if(m[i] == NULL)
+        {
+            break;
+        }
+    }
+
+    if(i != linhas)
+    {
+        fprintf(stderr,"Erro ao alocar memoria!!!");
+
+        for(i--;i >= 0;i--)
+        {
+            free(m[i]);
+        }
+        free(m);
+        return NULL;
     }
 
     return m;
@@ -33,7 +58,7 @@ int main()
     {
         for(j=0;j<c;j++)
         {
-            printf("%d--",matriz[i][j]);
+            printf("|%d|",matriz[i][j]);
         }
         printf("\n");
     }
