@@ -3,17 +3,16 @@
 #include <string.h>
 
 
-struct cadastro{
+typedef struct{
     char nome[50];
     char endereco[100];
     int telefone;
-};
-typedef struct cadastro Cadastro; 
+}cadastro;
 
 
 int main()
 {
-    Cadastro clientes[2];
+    cadastro clientes[2];
     int i=0;
 
     for(i=0;i<2;i++){
