@@ -4,23 +4,22 @@
 
 void inverterString(char *texto, int tamanho)
 {
-    int i=0,j=tamanho;
+    int i=0;
     char aux;
 
-    for(i=0,j=tamanho;i<j;i++,j--)
+    for(i=0;i<tamanho/2;i++)
     {
         aux = texto[i];
-        texto[i] = texto[j];
-        texto[j] = aux;
+        texto[i] = texto[tamanho-i-1];
+        texto[tamanho-i-1] = aux;
     }
-
-    printf("/n%s\n", texto);
 }
 
 
 int main()
 {
     char *palavra = (char*) malloc(100 * sizeof(char));
+    int n;
 
     if(palavra == NULL)
     {
@@ -30,7 +29,7 @@ int main()
     printf("Escreva uma palavra:\n");
     scanf(" %[^\n]", palavra);
 
-    int n = strlen(palavra);
+    n = strlen(palavra);
 
     system("cls");
 
@@ -44,4 +43,3 @@ int main()
 
     return 0;
 }
-////////////////////////duvida

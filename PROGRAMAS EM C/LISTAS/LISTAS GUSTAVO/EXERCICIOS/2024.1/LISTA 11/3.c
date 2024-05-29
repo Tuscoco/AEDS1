@@ -25,6 +25,7 @@ int main()
             if(p1[i] == p2[j])
             {
                 cont++;
+                break;
             }
         }
     }
