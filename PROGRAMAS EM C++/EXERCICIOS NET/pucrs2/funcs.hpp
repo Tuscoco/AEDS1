@@ -26,9 +26,9 @@ namespace classe{
             
             void imprimirInfo();
 
-            int getPessoas();
-            int getCapacidade();
-            int getAndar();
+            //int getPessoas();
+            //int getCapacidade();
+            //int getAndar();
     };
 
 }
