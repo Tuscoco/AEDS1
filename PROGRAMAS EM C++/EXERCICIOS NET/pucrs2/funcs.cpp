@@ -1,6 +1,15 @@
 #include "funcs.hpp"
 #include <iostream>
 
+void limparTela() {
+#ifdef _WIN32
+    std::system("cls");
+#else
+    // Assume Unix-like system
+    std::system("clear");
+#endif
+}
+
 void classe::elevador::entra(){
     if(capacidade == 0){
         std::cout << "Elevador lotado!!!" << std::endl;
@@ -40,7 +49,6 @@ void classe::elevador::desce(){
 }
 
 void classe::elevador::imprimirInfo(){
-    std::system("cls");
     std::cout << "==============================" << std::endl;
 
     std::cout << "Pessoas: " << pessoas << std::endl;

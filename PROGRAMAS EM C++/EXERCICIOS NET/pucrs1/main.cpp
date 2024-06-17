@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "funcs.hpp"
 #include "funcs.cpp"
 
@@ -12,7 +13,7 @@ int main()
     double vari;
 
     std::cout << "Informe um nome: ";
-    std::getline(std::cin,nome);
+    getline(std::cin,nome);
     p1.setNome(nome);
 
     std::cout << "Informe a idade: ";

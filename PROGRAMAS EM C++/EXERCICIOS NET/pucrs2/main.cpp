@@ -11,7 +11,7 @@ int main()
     char iniciar;
     int escolha;
 
-    std::system("cls");
+    limparTela();
 
     std::cout << "==========SISTEMA=DE=CONTROLE=DO=ELEVADOR==========" << std::endl;
     std::cout << "Bem vindo ao sistema de controle do elevador" << std::endl;
@@ -20,7 +20,7 @@ int main()
 
     std::cin >> iniciar;
 
-    std::system("cls");
+    limparTela();
 
     if(iniciar != 'S'){
         return 0;
