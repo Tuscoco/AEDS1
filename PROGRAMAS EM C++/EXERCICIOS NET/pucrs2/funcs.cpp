@@ -40,6 +40,7 @@ void classe::elevador::desce(){
 }
 
 void classe::elevador::imprimirInfo(){
+    std::system("cls");
     std::cout << "==============================" << std::endl;
 
     std::cout << "Pessoas: " << pessoas << std::endl;
@@ -48,18 +49,3 @@ void classe::elevador::imprimirInfo(){
 
     std::cout << "==============================" << std::endl;
 }
-
-/*
-int classe::elevador::getPessoas(){
-    return pessoas;
-}
-
-int classe::elevador::getCapacidade(){
-    return capacidade;
-}
-
-int classe::elevador::getAndar(){
-    return andar;
-}
-
-*/
