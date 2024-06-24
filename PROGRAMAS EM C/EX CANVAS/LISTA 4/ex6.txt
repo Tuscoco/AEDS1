@@ -1,0 +1,7 @@
+p++ == Incrementa o ponteiro "p", assim, apontando para o proximo endereço de memória após a operação
+
+(*p)++ == Incrementa o valor armazenado no endereço de memória "p" em 1
+
+*(p++) == Essa expressão é inválida e não faz nenhum sentido dem Linguagem C
+
+*(p+10) == Acessa o valor do endereço de memória 10 posiçoes a frente

@@ -1,0 +1,3 @@
+R: C) valorPtr == &valor
+
+pois essa parte do código verifica se o ponteiro valorPtr aponta para o endereço (&) de valor

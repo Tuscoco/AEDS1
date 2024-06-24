@@ -1,0 +1,1 @@
+O erro está somente na forma de imprimir o valor, no lugar de "&q", deveria ter "**q"
