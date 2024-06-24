@@ -1,8 +1,9 @@
 #include <iostream>
+#include <exception>
 
 class vetorFloat{
 
-    public:
+    protected:
         float *vet;
         int tamanho;
 
@@ -18,30 +19,56 @@ class vetorFloat{
             std::clog << "Construtor(int " << t << ")" << std::endl;
         }
         ~vetorFloat(){
-            delete vet;
+            delete[] vet;
             tamanho = 0;
             std::clog << "Destrutor" << std::endl;
         }
+        void imprimirInfo();
+        float& operator[] (int i);
 
 };
 
+void vetorFloat::imprimirInfo(){
+    std::cout << "[ ";
+    for(int i = 0;i < tamanho; i++){
+        std::cout << vet[i] << " ";
+    }
+    std::cout << " ]";
+}
+
+float& vetorFloat::operator[](int i){
+    if(i < tamanho){
+        return vet[i];
+    }else{
+        throw "ACESSO INVALIDO";
+    }
+}
+
+class VFDinamico:public vetorFloat{
+    public:
+        VFDinamico();
+        VFDinamico(int);
+};
+
+VFDinamico::VFDinamico():vetorFloat::vetorFloat(){}
+
+VFDinamico::VFDinamico(int t):vetorFloat(t){}
+
 int main()
 {
-    vetorFloat v1(5),v2;
+    vetorFloat v1,v2(5);
 
-    std::cout << "Valor de v1:[ ";
-    for(int i=0;i<v1.tamanho;i++)
-    {
-        std::cout << v1.vet[i] << " ";
-    }
-    std::cout << " ]" << std::endl;
+    std::cout << "Valor de v1: ";
+    v1.imprimirInfo();
+    std::cout << std::endl;
 
-    std::cout << "Valor de v2:[ ";
-    for(int i=0;i<v2.tamanho;i++)
-    {
-        std::cout << v2.vet[i] << " ";
+    for(int i = 0; i <= 4; i++){
+        v2[i] = i + 1;
     }
-    std::cout << "]" << std::endl;
+
+    std::cout << "Valor de v2: ";
+    v2.imprimirInfo();
+    std::cout << std::endl;
 
     return 0;
 }
