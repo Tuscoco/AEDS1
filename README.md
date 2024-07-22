@@ -1,1 +1,1 @@
-Meus códigos e treinos de AEDs1 do primeiro periodo de ciência da computação.
+Meus códigos e treinamentos da matéria de Algoritmos e Estrutura de Dados 1 do primeiro período do curso de Ciência da Computação
